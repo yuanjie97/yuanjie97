@@ -1,0 +1,12 @@
+CREATE TABLE `dept_leader` (
+  `id` int(11) NOT NULL,
+  `leaderName` varchar(255) DEFAULT NULL,
+  `json_value` json DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+insert into dept_leader VALUES(1,'leader1','{"name": "one", "id": "1", "leaderId": "1"}');
+insert into dept_leader VALUES(2,'leader2','{"name": "two", "id": "2", "leaderId": "3"}');
+insert into dept_leader VALUES(3,'leader3','{"name": "three", "id": "3", "leaderId": "4"}');
+insert into dept_leader VALUES(4,'leader4','{"name": "four", "id": "4", "leaderId": "5"}');
+insert into dept_leader VALUES(5,'leader5','{"name": "five", "id": "5", "leaderId": "5"}');
