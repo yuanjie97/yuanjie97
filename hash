@@ -1,0 +1,14 @@
+http {
+    upstream backend {
+        hash $remote_addr consistent;
+        server backend1.example.com;
+        server backend2.example.com;
+    }
+
+    server {
+        listen 80;
+        location / {
+            proxy_pass http://backend;
+        }
+    }
+}
