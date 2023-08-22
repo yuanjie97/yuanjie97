@@ -1,0 +1,22 @@
+#include "gifwindow.h"
+ 
+GifWindow::GifWindow(QWidget *parent)
+	: QWidget(parent)
+{
+	ui->setupUi(this);
+ 
+	this->setFixedSize(1080, 720);
+	
+	gif_label = new QLabel();
+	gif_label->setParent(this);
+	gif_label->setFixedSize(1080, 720);
+	movie = new QMovie();
+	movie->setFileName("./images/mygif.gif");
+	gif_label->setMovie(movie);
+	movie->start();
+}
+ 
+GifWindow::~GifWindow()
+{
+	delete ui;
+}
